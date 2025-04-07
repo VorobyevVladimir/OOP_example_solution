@@ -18,6 +18,7 @@ int main() {
 
 	temp = st1;
 
+
 	cout << "Before : " << endl;
 	cout<< st1.getString() << endl;
 	cout << temp.getString() << endl;
