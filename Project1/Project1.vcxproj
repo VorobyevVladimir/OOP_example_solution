@@ -140,7 +140,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="main.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="teacher.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

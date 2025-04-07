@@ -1,31 +1,43 @@
-#include "student.h"
+#include "teacher.h"
 
-void change(Student st) {
-	st.name = "Lesha";
-	st.age = 15;
-	st.mark = 10;
-	st.alive = false;
-}
 
 int main() {
+	Student* list = nullptr;
+	int size;
 
-	Student *st1 = nullptr;
-	st1 = new Student;
+	cout << "Input numbers of students: ";
+	cin >> size;
+	
+	list = new Student[size];
 
-	Student* st2 = st1;
+	cout << "Input students data: \n";
+	for (int i = 0; i < size; i++)
+	{
+		cout << "Student number : " << i +1 << ":\n";
+		cout << "Name : ";
+		cin >> list[i].name;
 
-	st1->name = "Vlad";
-	st1->age = 15;
-	st1->mark = 9.9;
-	st1->alive = true;
+		cout << "Age : ";
+		cin >> list[i].age;
 
-	cout << "Before: " << endl;
-	cout << st1->getString() << endl;
+		cout << "Mark : ";
+		cin >> list[i].mark;
 
-	st2->name = "Matvey";
+		cout << "Is alive (y/n): ";
+		char answer;
+		cin >> answer;
 
-	cout << "After: " << endl;
-	cout << st1->getString() << endl;
+		list[i].alive = islower(answer) == 'y';
+
+	}
+
+	teacher teacher;
+
+	Student result = teacher.getAllBestStudents(list, size);
+
+	string msg = result.alive ? "Best is" + result.name : "No best students";
+
+	cout << msg;
 
 	return 0;
 }
