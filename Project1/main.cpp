@@ -2,42 +2,20 @@
 
 
 int main() {
-	Student* list = nullptr;
-	int size;
 
-	cout << "Input numbers of students: ";
-	cin >> size;
-	
-	list = new Student[size];
+	Student student1{};
+	//Student student2("Alex");
+	//Student student3("Nikita", 15, 8.0, true);
+	//Student student4(student3);
 
-	cout << "Input students data: \n";
-	for (int i = 0; i < size; i++)
-	{
-		cout << "Student number : " << i +1 << ":\n";
-		cout << "Name : ";
-		cin >> list[i].name;
+	Student student2{ "Alex" };
+	Student student3{ "Nikita", 15, 8.0, true};
+	Student student4{ student3 };
 
-		cout << "Age : ";
-		cin >> list[i].age;
+	cout << student1.toString() << endl;
+	cout << student2.toString() << endl;
+	cout << student3.toString() << endl;
 
-		cout << "Mark : ";
-		cin >> list[i].mark;
-
-		cout << "Is alive (y/n): ";
-		char answer;
-		cin >> answer;
-
-		list[i].alive = islower(answer) == 'y';
-
-	}
-
-	teacher teacher;
-
-	Student result = teacher.getAllBestStudents(list, size);
-
-	string msg = result.alive ? "Best is" + result.name : "No best students";
-
-	cout << msg;
 
 	return 0;
 }
