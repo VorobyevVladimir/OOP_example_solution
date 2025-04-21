@@ -3,20 +3,13 @@
 
 int main() {
 
-	Student student1{};
-	//Student student2("Alex");
-	//Student student3("Nikita", 15, 8.0, true);
-	//Student student4(student3);
+	Student st1("Alex" , 15 , 10 , true);
+	
+	for (int i = 0; i < st1.countMark; i++) {
+		cout << st1.getMark(i) << " " << endl;
+	}
 
-	Student student2{ "Alex" };
-	Student student3{ "Nikita", 15, 8.0, true};
-	Student student4{ student3 };
-
-
-	cout << student1.toString() << endl;
-	cout << student2.toString() << endl;
-	cout << student3.toString() << endl;
-
+	
 
 	return 0;
 }

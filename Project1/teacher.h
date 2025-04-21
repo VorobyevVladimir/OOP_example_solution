@@ -11,7 +11,7 @@ class teacher {
 
 	public:
 
-		Student* getAllBestStudents(Student* students, int size) {
+		/*Student* getAllBestStudents(Student* students, int size) {
 			int count = countBestStudents(students, size);
 
 			Student* list_of_best = new Student[count];
@@ -26,5 +26,5 @@ class teacher {
 			
 
 			return list_of_best;
-		}
+		}*/
 };
