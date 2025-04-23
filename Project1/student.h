@@ -9,17 +9,13 @@ public:
 	bool alive;
 
 	//default-constructor or constructor without arguments
-	Student() {
-		//cout << "Default-constructor:/" << endl;
-		name = "no name";
-		age = 13;
-		marks = nullptr;
-		countMark = 0;
-		alive = true;
+	Student() :Student("no name", 13, 10 , true){
+		
+		
 	}
 	// constructor with arguments
 	Student(string nm) : Student(nm, 13, 4.0 , true) {
-		//cout << "Constructor with arguments" << endl;
+		
 		name = nm;
 		age = 13;
 		
@@ -27,7 +23,7 @@ public:
 	}
 	// canonical-constructor 
 	Student(string name , int age , int countMark , bool alive) {
-		///cout << "canonical-constructor " << endl;
+		
 		this->name = name;
 		this->age = age;
 		this->alive = alive;
@@ -41,12 +37,11 @@ public:
 	// copy-constructor 
 	Student(const Student& student) : Student (student.name, student.age,
 		student.countMark, student.alive) {
-		//cout << "Constructor with arguments" << endl;
 		
 	}
 	//destructor
 	~Student() {
-		//cout << "destructor:|" << endl;
+		
 		if (marks != nullptr) {
 			delete[] marks;
 		}
@@ -75,6 +70,7 @@ public:
 		{
 			s += to_string(marks[i]) + " ";
 		}
+		return s;
 	}
 
 	int getMark(int index) {
