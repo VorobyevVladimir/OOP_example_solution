@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3227754e-d197-47e0-a193-b146c256c96b}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{7038c4fd-43dd-45bb-81aa-31c0448baa24}</ProjectGuid>
+    <RootNamespace>ADSProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>MainProject</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,19 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Group.h" />
-    <ClInclude Include="initializer.h" />
-    <ClInclude Include="killer.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="student.h" />
-    <ClInclude Include="teacher.h" />
+    <ClCompile Include="ArrayList.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayList.cpp" />
-    <ClCompile Include="Group.cpp" />
-    <ClCompile Include="initializer.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="student.cpp" />
+    <ClInclude Include="ArrayList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

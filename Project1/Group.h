@@ -19,7 +19,7 @@ public:
 	void set(Student st1, Student st2);
 	void set(int index, Student st2);
 	int getCount();
-	String toString();
+	string toString();
 
 };
 

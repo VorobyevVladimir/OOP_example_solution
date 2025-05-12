@@ -1,6 +1,6 @@
 #include "initializer.h"
 
-void initializer::init(Student*& list, int count) {
+void init(Student*& list, int count) {
 		if (list == nullptr && count > 0) {
 			list = new Student[count];
 		}
