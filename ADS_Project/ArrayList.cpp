@@ -1,46 +1,35 @@
-#include "ArrayList.h"
+/*#include "ArrayList.h"
 
-ArrayList::ArrayList() {
-	ArrayList = nullptr;
-	size = 0;
-}
 
 void ArrayList::add(int value) {
 
-	if (index > 0 && index < size && array != nullptr) {
+	if (array != nullptr) {
 
-		int* newArray = new int[size + 1];
-		for (int i = 0; i < size; i++)
-		{
+	int* newArray = new int[size + 1];
+		for (int i = 0; i < size; i++){
+
 			newArray[i] = array[i];
 		}
 		delete[] array;
-		newArray[i] = array[i];
+
 		size++;
 
 
 	
 	}
-
-	delete[] ;
-
 }
 void ArrayList::add(int index, int value) {
 
 	if (index > 0 && index < size && array != nullptr) {
 
+		int* newArray = new int[size + 1];
+
 		for (int i = 0 , j = 0; i < size; i++)
 		{
-			if (i != index) {
-				NewArray = array[i++];
-			}
-
-
+			newArray[i] = array[i];
 		}
 
-		int* list = new int[size];
-
-		list[index - 1] = value;
+		delete[] array;
 
 	}
 }
@@ -62,7 +51,7 @@ void remove() {
 
 }
 
-int size() {  }
+int getsize() {  }
 int ArrayList::get(int index) {
 	if (index > 0  && array != nullptr) {
 
@@ -90,4 +79,4 @@ bool isEmpty() { return size() == 0; }
 string toString(){
 	string s = "";
 
-}
+}*/
