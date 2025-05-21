@@ -141,18 +141,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Group.h" />
+    <ClInclude Include="Human.h" />
     <ClInclude Include="initializer.h" />
     <ClInclude Include="killer.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="teacher.h" />
+    <ClInclude Include="Worker.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="Group.cpp" />
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="initializer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

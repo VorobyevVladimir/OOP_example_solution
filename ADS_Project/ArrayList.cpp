@@ -1,82 +1,108 @@
-/*#include "ArrayList.h"
+#include "ArrayList.h"
+
 
 
 void ArrayList::add(int value) {
 
 	if (array != nullptr) {
 
-	int* newArray = new int[size + 1];
-		for (int i = 0; i < size; i++){
+		int* newArray = new int[size + 1];
+
+		for (int i = 0; i < size; i++) {
 
 			newArray[i] = array[i];
 		}
+
 		delete[] array;
 
+		array = newArray;
 		size++;
-
-
-	
 	}
+
 }
+//O(N)
+
 void ArrayList::add(int index, int value) {
 
-	if (index > 0 && index < size && array != nullptr) {
+	if (array != nullptr) {
 
 		int* newArray = new int[size + 1];
 
-		for (int i = 0 , j = 0; i < size; i++)
-		{
+		for (int i = 0; i < size; i++) {
+
 			newArray[i] = array[i];
 		}
 
 		delete[] array;
 
+		array = newArray;
+		size++;
 	}
+
 }
-void addAll(int* values, int size);
-void addAll(int index, int* values, int size);
 
-void remove(int index);
-void remove() {
+void ArrayList::remove() {
 
+	if (array == nullptr || size <= 0) {
+
+		return;
+	}
 
 	size--;
 
 	int* newArray = new int[size];
 
-	for (int i = 0; i < size; i++)
-	{
+	for (int i = 0; i < size; i++) {
 
+		newArray[i] = array[i];
 	}
 
+	delete[] array;
+
+	array = newArray;
 }
 
-int getsize() {  }
+
 int ArrayList::get(int index) {
-	if (index > 0  && array != nullptr) {
 
-		return array[index];
+	if (array == nullptr || index < 0 || index >= size) {
+
+		return 0;
 	}
+
+	return array[index];
 }
-void set(int index, int value) {
+//O(1)
 
-	if (index > 0 && index < size && array != nullptr) {
+void ArrayList::set(int index, int value) {
 
-		int* list = new int[size];
+	if (array == nullptr || index < 0 || index >= size) {
 
-		list[index - 1] = value;
+		return;
 	}
+
+	array[index] = value;
 }
+//O(1)
+
 void ArrayList::clear() {
+
 	if (array != nullptr) {
+
 		delete[] array;
+
 		array = nullptr;
 		size = 0;
 	}
 }
-bool isEmpty() { return size() == 0; }
 
-string toString(){
-	string s = "";
+int ArrayList::getSize() {
 
-}*/
+	return size;
+}
+
+
+bool ArrayList::isEmpty() {
+
+	return size == 0;
+}

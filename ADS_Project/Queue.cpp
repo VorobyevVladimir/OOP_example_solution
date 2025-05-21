@@ -68,7 +68,7 @@ bool Queue::isEmpty(){
 	return size == 0;
 }
 
-string toString(){
+string Queue::toString(){
 	string s = "Queue is empty";
 
 	if (!isEmpty()) {
