@@ -1,5 +1,5 @@
 #pragma once
-#include "Worker.h"
+#include "Group.h"
 
 // function class
 class Manager
